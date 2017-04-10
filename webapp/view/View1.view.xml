@@ -1,18 +1,46 @@
 <mvc:View controllerName="com.acc.trainingTestDemo.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m" height="100%" controllerName="sap.ui.comp.sample.filterbar.example2.FilterBar"
+	displayBlock="true" xmlns="sap.m" height="100%" 
 	xmlns:fb="sap.ui.comp.filterbar" xmlns:l="sap.ui.layout">
 	<Page title="Social Application List" class="sapUiContentPadding" showNavButton="true" enableScrolling="true">
 		<content height="100%" width="100%" horizontal="true" vertical="true" focusable="true">
 			<l:VerticalLayout width="100%">
-				<Label text="FilterBar"/>
+				<Label text="SOA Search"/>
 				<!--<Button text="toggle SearchField" press="onToggleSearchField"/>-->
 				<!--<Button text="toggle Filters Button" press="onToggleShowFilters"/>-->
 				<fb:FilterBar id="filterBar" reset="onReset" search="onSearch" clear="onClear" showRestoreButton="true" showClearButton="true"
 					header="Header">
-					<SearchField showSearchButton="false"/>
+					<SearchField showSearchButton="True"/>
 					<fb:filterItems>
 						<fb:FilterItem name="SOA ID" label="{i18n>SoaID}">
-							<fb:control>
+						<fb:control>
+								<Input type="Text" change="onChange"/>
+							</fb:control>
+						</fb:FilterItem>
+					</fb:filterItems>
+					<fb:filterItems>
+						<fb:FilterItem name="Applicant" label="{i18n>Applicant}">
+						<fb:control>
+								<Input type="Text" change="onChange"/>
+							</fb:control>
+						</fb:FilterItem>
+					</fb:filterItems>
+					<fb:filterItems>
+						<fb:FilterItem name="Status" label="{i18n>Status}">
+						<fb:control>
+								<Input type="Text" change="onChange"/>
+							</fb:control>
+						</fb:FilterItem>
+					</fb:filterItems>
+					<fb:filterItems>
+						<fb:FilterItem name="StartDate" label="{i18n>StartDate}">
+						<fb:control>
+								<Input type="Text" change="onChange"/>
+							</fb:control>
+						</fb:FilterItem>
+					</fb:filterItems>
+					<fb:filterItems>
+						<fb:FilterItem name="EndDate" label="{i18n>EndDate}">
+						<fb:control>
 								<Input type="Text" change="onChange"/>
 							</fb:control>
 						</fb:FilterItem>
