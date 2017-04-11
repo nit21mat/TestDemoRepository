@@ -9,7 +9,7 @@
 				<!--<Button text="toggle Filters Button" press="onToggleShowFilters"/>-->
 				<fb:FilterBar id="filterBar" reset="onReset" search="onSearch" clear="onClear" showRestoreButton="true" showClearButton="true"
 					header="Header">
-					<SearchField showSearchButton="True"/>
+					<SearchField showSearchButton="false"/>
 					<fb:filterItems>
 						<fb:FilterItem name="SOA ID" label="{i18n>SoaID}">
 						<fb:control>
