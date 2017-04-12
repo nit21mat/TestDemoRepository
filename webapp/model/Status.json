@@ -1,0 +1,12 @@
+{
+	"items": [{
+		"StatusID": "DZ",
+		"StatusText": "Algeria"
+	}, {
+		"StatusID": "AR",
+		"StatusText": "Argentina"
+	}, {
+		"StatusID": "AU",
+		"StatusText": "Australia"
+	}]
+}

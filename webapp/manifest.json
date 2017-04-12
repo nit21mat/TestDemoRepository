@@ -75,6 +75,7 @@
 					"bundleName": "com.acc.trainingTestDemo.i18n.i18n"
 				}
 			},
+		
 			"": {
 				"dataSource": "ZSOA_SEARCH_DETAILS_SRV",
 				"settings": {
