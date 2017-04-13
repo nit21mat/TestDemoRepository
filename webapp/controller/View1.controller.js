@@ -8,8 +8,8 @@ sap.ui.define([
     return Controller.extend("com.acc.trainingTestDemo.controller.View1", { 
      onInit: function () {
  			// set explored app's demo model on this sample
-			var oModel = new JSONModel(jQuery.sap.getModulePath("com.acc.trainingTestDemo.model", "/Status.json"));
-			this.getView().setModel(oModel);
+			// var oModel = new JSONModel(jQuery.sap.getModulePath("com.acc.trainingTestDemo.model", "/Status.json"));
+			// this.getView().setModel(oModel);
      }
 	});
 });

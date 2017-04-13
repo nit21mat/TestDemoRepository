@@ -21,6 +21,10 @@
 					"odataVersion": "2.0",
 					"localUri": "model/metadata.xml"
 				}
+			},
+			"status_alias": {
+				"uri": "./model/Status.json",
+				"type": "JSON"
 			}
 		}
 	},
@@ -75,19 +79,22 @@
 					"bundleName": "com.acc.trainingTestDemo.i18n.i18n"
 				}
 			},
-		
+			"status": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "status_alias"
+			},
 			"": {
 				"dataSource": "ZSOA_SEARCH_DETAILS_SRV",
 				"settings": {
 					"defaultBindingMode": "TwoWay",
 					"defaultCountMode": "None"
 				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		}
-	},
-	"resources": {
-		"css": [{
-			"uri": "css/style.css"
-		}]
 	}
-}
 }

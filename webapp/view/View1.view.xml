@@ -26,8 +26,8 @@
 					<fb:filterItems>
 						<fb:FilterItem name="Status" label="{i18n>Status}">
 							<fb:control>
-								<ComboBox items="{ path: '/StatusCollection', sorter: { path: 'Name' } }">
-									<core:Item key="{StatusId}" text="{StatusText}"/>
+								<ComboBox items="{ path: 'status>/StatusCollection', sorter: { path: 'Name' } }">
+									<core:Item key="{/StatusId}" text="{/StatusText}"/>
 								</ComboBox>
 							</fb:control>
 						</fb:FilterItem>
