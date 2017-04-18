@@ -6,25 +6,25 @@
 				<Label text="SOA Search"/>
 				<!--<Button text="toggle SearchField" press="onToggleSearchField"/>-->
 				<!--<Button text="toggle Filters Button" press="onToggleShowFilters"/>-->
-				<fb:FilterBar id="filterBar" reset="onReset" search="onSearch" clear="onClear" showRestoreButton="true" showClearButton="true"
+				<fb:FilterBar id="soaFilterBar" reset="onReset" search="onSearch" clear="onClear" showRestoreButton="true" showClearButton="true"
 					header="Header">
 					<SearchField showSearchButton="false"/>
 					<fb:filterItems>
-						<fb:FilterItem name="SOA ID" label="{i18n>SoaID}">
+						<fb:FilterItem name="soaId" label="{i18n>SoaID}">
 							<fb:control>
 								<Input type="Text" change="onChange"/>
 							</fb:control>
 						</fb:FilterItem>
 					</fb:filterItems>
 					<fb:filterItems>
-						<fb:FilterItem name="Applicant" label="{i18n>Applicant}">
+						<fb:FilterItem name="applicant" label="{i18n>Applicant}">
 							<fb:control>
 								<Input type="Text" change="onChange"/>
 							</fb:control>
 						</fb:FilterItem>
 					</fb:filterItems>
 					<fb:filterItems>
-						<fb:FilterItem name="Status" label="{i18n>Status}">
+						<fb:FilterItem name="status" label="{i18n>Status}">
 							<fb:control>
 								<ComboBox items="{ path: 'status>/StatusCollection', sorter: { path: 'Name' } }">
 									<core:Item key="{status>StatusID}" text="{status>StatusID} - {status>StatusText}"/>
@@ -33,22 +33,17 @@
 						</fb:FilterItem>
 					</fb:filterItems>
 					<fb:filterItems>
-						<fb:FilterItem name="StartDate" label="{i18n>StartDate}">
+						<fb:FilterItem name="EffDates" label="{i18n>StartDate}">
 							<fb:control>
-								<DatePicker id="DP1" change="handleChange" valueFormat="yyyy-MM-dd" class="sapUiSmallMarginBottom"/>
-							</fb:control>
-						</fb:FilterItem>
-					</fb:filterItems>
-					<fb:filterItems>
-						<fb:FilterItem name="EndDate" label="{i18n>EndDate}">
-							<fb:control>
-								<DatePicker id="DP2" change="handleChange" valueFormat="yyyy-MM-dd" class="sapUiSmallMarginBottom"/>
+							<DateRangeSelection change="onFilterChange"
+													placeholder=""
+													tooltip="Effective Dates" />
 							</fb:control>
 						</fb:FilterItem>
 					</fb:filterItems>
 				</fb:FilterBar>
 			</l:VerticalLayout>
-			<Table id="idProductsTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
+			<Table id="soaTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
 				items="{ path: '/SOASearchResultSet', sorter: { path: 'SoaIdRes' } }">
 				<headerToolbar>
 					<Toolbar>
