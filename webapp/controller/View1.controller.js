@@ -21,7 +21,7 @@ sap.ui.define([
 		this.oFilterBar.registerApplyData(this.fApplyData);
 		this.oFilterBar.registerGetFiltersWithValues(this.fGetFiltersWithValues);
  
-		this.fVariantStub();
+		// this.fVariantStub();
  
 		this.onToggleSearchField();
  
@@ -29,6 +29,22 @@ sap.ui.define([
  
 		this._sHeader = this.oFilterBar.getHeader();
      },
+     
+     onToggleSearchField: function(oEvent) {
+ 
+		var oSearchField = this.oFilterBar.getBasicSearch();
+		if (!oSearchField) {
+			var oBasicSearch = new sap.m.SearchField({
+				showSearchButton: false
+			});
+		} else {
+			oSearchField = null;
+		}
+ 
+		this.oFilterBar.setBasicSearch(oBasicSearch);
+	},
+ 
+	
 		onSearch : function (oEvent) {
 
 			// build filter array
