@@ -1,12 +1,12 @@
 {
 	"StatusCollection": [{
-		"StatusID": "DZ",
-		"StatusText": "Algeria"
+		"StatusID": "I1558",
+		"StatusText": "Approved"
 	}, {
-		"StatusID": "AR",
-		"StatusText": "Argentina"
+		"StatusID": "I1005",
+		"StatusText": "Completed"
 	}, {
-		"StatusID": "AU",
-		"StatusText": "Australia"
+		"StatusID": "I1003",
+		"StatusText": "In Process"
 	}]
 }
