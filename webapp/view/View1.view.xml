@@ -75,8 +75,20 @@
 						<cells>
 							<ObjectIdentifier text="{SoaIdRes}"/>
 							<Text text="{ApplicantNameRes}"/>
-							<Text text="{ValidFromRes}"/>
-							<Text text="{ValidToRes}"/>
+							<Text text="{
+                                        path : 'ValidFromRes',
+                                        type : 'sap.ui.model.type.Date',
+                                        formatOptions : {
+                                              style : 'medium'
+                                        }
+                                  }"/>
+							<Text text="{
+                                        path : 'ValidToRes',
+                                        type : 'sap.ui.model.type.Date',
+                                        formatOptions : {
+                                              style : 'medium'
+                                        }
+                                  }"/>
 							<Text text="{ApplicantRes}"/>
 							<Text text="{StatusRes}"/>
 							<!--<ObjectNumber-->

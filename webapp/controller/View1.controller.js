@@ -32,7 +32,12 @@ sap.ui.define([
 			this._sHeader = oFilterBar.getHeader();
 
 		},
-
+		
+		 onSelectionChange: function(oEvent){
+          var item = oEvent.getSource().getBindingContext().getObject();
+          var soaid = item.SoaIdRes;
+          },
+         
 		onToggleSearchField: function(oEvent) {
 
 			var oSearchField = this.oFilterBar.getBasicSearch();
@@ -171,10 +176,10 @@ sap.ui.define([
 				return [new Filter("SoaIdRes", FilterOperator.Contains, oControl.getValue())];
 			} else if (sName === this.mFilterItems.applicant && oControl.getValue()) {
 				return [new Filter("ApplicantRes", FilterOperator.Contains, oControl.getValue())];
-			} else if (sName === this.mFilterItems.status && oControl.getValue()) {
-				return [new Filter("StatusRes", FilterOperator.Contains, oControl.getValue())];
+			} else if (sName === this.mFilterItems.status && oControl.selectedItemId()) {
+				return [new Filter("StatusRes", FilterOperator.Contains,oControl.selectedItemId())];
 			} else if (sName === this.mFilterItems.EffDates && oControl.getDateValue() && oControl.getSecondDateValue()) {
-				oStartDate = this._fnParseDateFormat(oControl.getDateValue());
+				oStartDate = this._fnParseDateFormat(oControl.getDateValue());     
 				oEndDate = this._fnParseDateFormat(oControl.getSecondDateValue());
 				return [new Filter("ValidFromRes", FilterOperator.BT, oStartDate),
 					new Filter("ValidToRes", FilterOperator.BT, oEndDate)
@@ -201,6 +206,7 @@ sap.ui.define([
 			var oDateFormat = DateFormat.getDateInstance();
 			return oDateFormat.parse(oDateFormat.format(oDate), true);
 		}
-
+	
 	});
-});
+	
+	});
