@@ -106,21 +106,21 @@
 	  "routes": [
 		{
 		  "pattern": "",
-		  "name": "View1",
-		  "target": "View1"
+		  "name": "View1.view",
+		  "target": "View1,view"
 		},
 		{
-		  "pattern": "View2/{soaid}",
-		  "name": "View2",
-		  "target": "View2"
+		  "pattern": "View2.view/{soaid}",
+		  "name": "View2.view",
+		  "target": "View2.view"
 		}
 	  ],
 	  "targets": {
 		"overview": {
-		  "viewName": "View1"
+		  "viewName": "View1.view"
 		},
 		"detail": {
-		  "viewName": "View2"
+		  "viewName": "View2.view"
 		}
 	  }
 	}
