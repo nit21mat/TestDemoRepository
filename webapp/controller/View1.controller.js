@@ -28,6 +28,9 @@ sap.ui.define([
 			//	this.fVariantStub();
 
 			oFilterBar.fireInitialise();
+			
+			// create the views based on the url/hash
+			this.getRouter().initialize();
 
 			this._sHeader = oFilterBar.getHeader();
 
@@ -36,9 +39,11 @@ sap.ui.define([
 		 onSelectionChange: function(oEvent){
           var item = oEvent.getSource().getBindingContext().getObject();
           var soaid = item.SoaIdRes;
+          var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+	      oRouter.navTo("detail");
           },
          
-		onToggleSearchField: function(oEvent) {
+		onToggleSearchField: function(oEvent){
 
 			var oSearchField = this.oFilterBar.getBasicSearch();
 			if (!oSearchField) {
