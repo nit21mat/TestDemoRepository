@@ -7,7 +7,7 @@
     "targetFolder": "dist",
     "sourceFolder": "webapp",
     "buildRequired": true,
-    "lastBuildDateTime": "Tue, 18 Apr 2017 13:46:16 GMT"
+    "lastBuildDateTime": "Mon, 24 Apr 2017 15:50:49 GMT"
   },
   "generation": [
     {
@@ -36,8 +36,8 @@
     "blockPushLevel": "Error"
   },
   "hcpdeploy": {
-    "account": "s0011952991trial",
+    "account": "p1176671trial",
     "name": "testdemorepository",
-    "lastVersionWeTriedToDeploy": "1.0.1"
+    "lastVersionWeTriedToDeploy": "1.0.0"
   }
 }

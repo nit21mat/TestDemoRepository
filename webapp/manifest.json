@@ -50,7 +50,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "com.acc.trainingTestDemo.view.View1",
+			"viewName": "com.acc.trainingTestDemo.view.App",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -96,34 +96,34 @@
 			]
 		},
 		"routing": {
-	  "config": {
-		"routerClass": "sap.m.routing.Router",
-		"viewType": "XML",
-		"viewPath": "sap.ui.demo.wt.view",
-		"controlId": "app",
-		"controlAggregation": "pages"
-	  },
-	  "routes": [
-		{
-		  "pattern": "",
-		  "name": "View1.view",
-		  "target": "View1,view"
-		},
-		{
-		  "pattern": "View2.view/{soaid}",
-		  "name": "View2.view",
-		  "target": "View2.view"
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.acc.trainingTestDemo.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "View1",
+					"target": "View1"
+				},
+				{
+					"pattern": "View2/{soaId}",
+					"name": "View2",
+					"target": "View2"
+				}
+			],
+			"targets": {
+				"View1": {
+					"viewName": "View1"
+				},
+				"View2": {
+					"viewName": "View2"
+				}
+			}
 		}
-	  ],
-	  "targets": {
-		"overview": {
-		  "viewName": "View1.view"
-		},
-		"detail": {
-		  "viewName": "View2.view"
-		}
-	  }
-	}
 	},
 	"sap.platform.hcp": {
 		"uri": "webapp",
