@@ -1,6 +1,6 @@
 <mvc:View height="100%" controllerName="com.acc.trainingTestDemo.controller.View2" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
 	xmlns="sap.m">
-	<Page title="{i18n>detailPageTitle}">
+	<!--<Page title="{i18n>detailPageTitle}">
 		<ObjectHeader id="soaHeader" responsive="true" fullScreenOptimized="true" binding="{/SOAHeaderDetails/Soaid}" icon="{ProductPicUrl}" iconAlt="{Name}"
 			intro="{Description}" title="{Name}" titleActive="true" titlePress="handleTitlePress"
 			showMarkers="true" markFlagged="true" markFavorite="true" numberState="Success" backgroundDesign="Translucent">
@@ -31,5 +31,5 @@
 				</IconTabBar>
 			</headerContainer>
 		</ObjectHeader>
-	</Page>
+	</Page>-->
 </mvc:View>

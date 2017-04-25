@@ -40,7 +40,7 @@ sap.ui.define([
 						oRouter.navTo("View2");*/
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("View2", {
-				soaId: oEvent.getSource().getBindingContext().getProperty("SoaIdRes")
+				soaId: oEvent.getSource().getBindingContext().getObject().SoaIdRes
 			});
 		},
 
