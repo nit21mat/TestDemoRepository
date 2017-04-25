@@ -71,7 +71,7 @@
 					</Column>
 				</columns>
 				<items>
-					<ColumnListItem>
+					<ColumnListItem type="Navigation" press="onSelectionChange">
 						<cells>
 							<ObjectIdentifier text="{SoaIdRes}"/>
 							<Text text="{ApplicantNameRes}"/>

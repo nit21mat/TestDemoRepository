@@ -1,11 +1,9 @@
-<mvc:View height="100%" controllerName="sap.m.sample.ObjectHeaderResponsiveIII.Page" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
+<mvc:View height="100%" controllerName="com.acc.trainingTestDemo.controller.View2" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
 	xmlns="sap.m">
-	<Input value="Welcome to Page2"/>
-<!--	<Page title="{i18n>detailPageTitle}">
-		<ObjectHeader id="oh1" responsive="true" fullScreenOptimized="true" binding="{/ProductCollection/2}" icon="{ProductPicUrl}" iconAlt="{Name}"
+	<Page title="{i18n>detailPageTitle}">
+		<ObjectHeader id="soaHeader" responsive="true" fullScreenOptimized="true" binding="{/SOAHeaderDetails/Soaid}" icon="{ProductPicUrl}" iconAlt="{Name}"
 			intro="{Description}" title="{Name}" titleActive="true" titlePress="handleTitlePress"
-			number="{ parts:[{path:'Price'},{path:'CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
-			numberUnit="{CurrencyCode}" showMarkers="true" markFlagged="true" markFavorite="true" numberState="Success" backgroundDesign="Translucent">
+			showMarkers="true" markFlagged="true" markFavorite="true" numberState="Success" backgroundDesign="Translucent">
 			<attributes>
 				<ObjectAttribute title="SoaID" text="{SoaID}"/>
 				<ObjectAttribute title="SOA Description" text="{SOADescription}" active="true"/>
@@ -33,5 +31,5 @@
 				</IconTabBar>
 			</headerContainer>
 		</ObjectHeader>
-	</Page>-->
+	</Page>
 </mvc:View>
