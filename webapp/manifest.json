@@ -50,7 +50,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "com.acc.trainingTestDemo.view.View1",
+			"viewName": "com.acc.trainingTestDemo.view.App",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -94,6 +94,35 @@
 					"uri": "css/style.css"
 				}
 			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.acc.trainingTestDemo.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "View1",
+					"target": "View1"
+				},
+				{
+					"pattern": "View2/{soaId}",
+					"name": "View2",
+					"target": "View2"
+				}
+			],
+			"targets": {
+				"View1": {
+					"viewName": "View1"
+				},
+				"View2": {
+					"viewName": "View2"
+				}
+			}
 		}
 	},
 	"sap.platform.hcp": {

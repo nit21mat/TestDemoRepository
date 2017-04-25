@@ -1,0 +1,36 @@
+<mvc:View height="100%" controllerName="com.acc.trainingTestDemo.controller.View2" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout"
+	xmlns="sap.m">
+	<Input value="{/soaHeader/soaId}"/>
+	<!--<Page title="{i18n>detailPageTitle}">
+		<ObjectHeader id="soaHeader" responsive="true" fullScreenOptimized="true" binding="{/SOAHeaderDetails/Soaid}" icon="{ProductPicUrl}" iconAlt="{Name}"
+			intro="{Description}" title="{Name}" titleActive="true" titlePress="handleTitlePress"
+			showMarkers="true" markFlagged="true" markFavorite="true" numberState="Success" backgroundDesign="Translucent">
+			<attributes>
+				<ObjectAttribute title="SoaID" text="{SoaID}"/>
+				<ObjectAttribute title="SOA Description" text="{SOADescription}" active="true"/>
+				<ObjectAttribute title="Status" text="{Status}"/>
+			</attributes>
+			<statuses>
+				<ObjectStatus title="Approval" text="Pending" state="Warning"/>
+			</statuses>
+			<headerContainer>
+				<IconTabBar id="itb1" selectedKey="key3" upperCase="true" class="sapUiResponsiveContentPadding">
+					<items>
+						<IconTabFilter icon="sap-icon://hint">
+							<Text text="Info content goes here ..."/>
+						</IconTabFilter>
+						<IconTabFilter icon="sap-icon://attachment" count="3">
+							<Text text="Attachments go here ..."/>
+						</IconTabFilter>
+						<IconTabFilter icon="sap-icon://notes" count="12">
+							<Text text="Notes go here ..."/>
+						</IconTabFilter>
+						<IconTabFilter icon="sap-icon://group">
+							<Text text="People content goes here ..."/>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+			</headerContainer>
+		</ObjectHeader>
+	</Page>-->
+</mvc:View>

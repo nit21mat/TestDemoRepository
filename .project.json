@@ -36,8 +36,8 @@
     "blockPushLevel": "Error"
   },
   "hcpdeploy": {
-    "account": "s0011952991trial",
+    "account": "p1176671trial",
     "name": "testdemorepository",
-    "lastVersionWeTriedToDeploy": "1.0.1"
+    "lastVersionWeTriedToDeploy": "1.0.0"
   }
 }
