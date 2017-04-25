@@ -13,7 +13,8 @@ sap.ui.define([
 			soaId: "soaId",
 			applicant: "applicant",
 			status: "status",
-			EffDates: "EffDates"
+			EffDates: "EffDates",
+			EffDates1: "EffDates1"
 		},
 		onInit: function() {
 			var oFilterBar;
@@ -171,14 +172,21 @@ sap.ui.define([
 				return [new Filter("SoaIdRes", FilterOperator.Contains, oControl.getValue())];
 			} else if (sName === this.mFilterItems.applicant && oControl.getValue()) {
 				return [new Filter("ApplicantRes", FilterOperator.Contains, oControl.getValue())];
-			} else if (sName === this.mFilterItems.status && oControl.getValue()) {
-				return [new Filter("StatusRes", FilterOperator.Contains, oControl.getValue())];
-			} else if (sName === this.mFilterItems.EffDates && oControl.getDateValue() && oControl.getSecondDateValue()) {
+			} else if (sName === this.mFilterItems.status && oControl.getSelectedKey()) {
+				//return [new Filter("StatusRes", FilterOperator.Contains, oControl.getSelectedKey())];
+				return [new Filter("StatusIdRes", FilterOperator.Contains, oControl.getSelectedKey())];
+			// } else if (sName === this.mFilterItems.EffDates && oControl.getDateValue() && oControl.getSecondDateValue()) {
+			// 	oStartDate = this._fnParseDateFormat(oControl.getDateValue());
+			// 	oEndDate = this._fnParseDateFormat(oControl.getSecondDateValue());
+			// 	return [new Filter("ValidFromRes", FilterOperator.BT, oStartDate),
+			// 		new Filter("ValidToRes", FilterOperator.BT, oEndDate)
+			} else if (sName === this.mFilterItems.EffDates && oControl.getDateValue()) {
 				oStartDate = this._fnParseDateFormat(oControl.getDateValue());
-				oEndDate = this._fnParseDateFormat(oControl.getSecondDateValue());
-				return [new Filter("ValidFromRes", FilterOperator.BT, oStartDate),
-					new Filter("ValidToRes", FilterOperator.BT, oEndDate)
-				];
+			//	oEndDate = this._fnParseDateFormat(oControl.getSecondDateValue());
+				return [new Filter("ValidFromRes", FilterOperator.BT, oStartDate)];
+			} else if (sName === this.mFilterItems.EffDates1 && oControl.getDateValue()) {
+				oEndDate = this._fnParseDateFormat(oControl.getDateValue());
+				return [new Filter("ValidToRes", FilterOperator.BT, oEndDate)];
 			} else {
 				return null;
 			}

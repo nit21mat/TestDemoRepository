@@ -35,9 +35,48 @@
 					<fb:filterItems>
 						<fb:FilterItem name="EffDates" label="{i18n>StartDate}">
 							<fb:control>
-							<DateRangeSelection change="onFilterChange"
-													placeholder=""
-													tooltip="Effective Dates" />
+								<!--<DateRangeSelection change="onFilterChange"-->
+								<!--						placeholder=""-->
+								<!--						tooltip="Effective Dates" />-->
+								<DatePicker models="" bindingContexts="" objectBindings="" busy="false" busyIndicatorDelay="1000" visible="true" fieldGroupIds="[]" value=""
+									width="auto" enabled="true" valueState="None" name="" placeholder="" editable="true" valueStateText="" showValueStateMessage="true"
+									textAlign="Initial" textDirection="Inherit" required="false" displayFormat="" valueFormat="" dateValue="" displayFormatType="" minDate=""
+									maxDate="" change="onFilterChange">
+									<tooltip></tooltip>
+									<!-- sap.ui.core.TooltipBase -->
+									<customData></customData>
+									<!-- sap.ui.core.CustomData -->
+									<layoutData></layoutData>
+									<!-- sap.ui.core.LayoutData -->
+									<dependents></dependents>
+									<!-- sap.ui.core.Control -->
+									<specialDates></specialDates>
+									<!-- sap.ui.core.Element -->
+								</DatePicker>
+							</fb:control>
+						</fb:FilterItem>
+					</fb:filterItems>
+					<fb:filterItems>
+						<fb:FilterItem name="EffDates1" label="{i18n>EndDate}">
+							<fb:control>
+								<!--<DateRangeSelection change="onFilterChange"-->
+								<!--						placeholder=""-->
+								<!--						tooltip="Effective Dates" />-->
+								<DatePicker models="" bindingContexts="" objectBindings="" busy="false" busyIndicatorDelay="1000" visible="true" fieldGroupIds="[]" value=""
+									width="auto" enabled="true" valueState="None" name="" placeholder="" editable="true" valueStateText="" showValueStateMessage="true"
+									textAlign="Initial" textDirection="Inherit" required="false" displayFormat="" valueFormat="" dateValue="" displayFormatType="" minDate=""
+									maxDate="" change="onFilterChange">
+									<tooltip></tooltip>
+									<!-- sap.ui.core.TooltipBase -->
+									<customData></customData>
+									<!-- sap.ui.core.CustomData -->
+									<layoutData></layoutData>
+									<!-- sap.ui.core.LayoutData -->
+									<dependents></dependents>
+									<!-- sap.ui.core.Control -->
+									<specialDates></specialDates>
+									<!-- sap.ui.core.Element -->
+								</DatePicker>
 							</fb:control>
 						</fb:FilterItem>
 					</fb:filterItems>
@@ -75,20 +114,8 @@
 						<cells>
 							<ObjectIdentifier text="{SoaIdRes}"/>
 							<Text text="{ApplicantNameRes}"/>
-							<Text text="{
-                                        path : 'ValidFromRes',
-                                        type : 'sap.ui.model.type.Date',
-                                        formatOptions : {
-                                              style : 'medium'
-                                        }
-                                  }"/>
-							<Text text="{
-                                        path : 'ValidToRes',
-                                        type : 'sap.ui.model.type.Date',
-                                        formatOptions : {
-                                              style : 'medium'
-                                        }
-                                  }"/>
+							<Text text="{ path : 'ValidFromRes', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+							<Text text="{ path : 'ValidToRes', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
 							<Text text="{ApplicantRes}"/>
 							<Text text="{StatusRes}"/>
 							<!--<ObjectNumber-->
