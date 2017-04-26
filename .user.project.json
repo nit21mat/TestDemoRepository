@@ -16,11 +16,9 @@
         "runnerId": "webapprunner",
         "id": 3757458,
         "displayName": "Run index.html",
-<<<<<<< HEAD
         "lastRunTimeStamp": 1493129750385
-=======
-        "lastRunTimeStamp": 1493114822957
->>>>>>> branch 'master' of https://github.com/nit21mat/TestDemoRepository.git
+        
+
       }
     }
   ]
