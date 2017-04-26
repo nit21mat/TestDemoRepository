@@ -1,12 +1,16 @@
 {
 	"StatusCollection": [{
-		"StatusID": "I1558",
+		"StatusID": "E0001",
+		"StatusText": "Open"
+	}, {
+		"StatusID": "E0002",
+		"StatusText": "In Progress"
+	}, {
+		"StatusID": "E0003",
 		"StatusText": "Approved"
-	}, {
-		"StatusID": "I1005",
-		"StatusText": "Completed"
-	}, {
-		"StatusID": "I1003",
-		"StatusText": "In Process"
+	}, 
+	{
+		"StatusID": "E0004",
+		"StatusText": "Rejected"
 	}]
 }
