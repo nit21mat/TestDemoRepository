@@ -22,7 +22,27 @@
 				<subSections>
 					<ObjectPageSubSection id="SSPDetailsSS" title=" ">
 						<blocks>
-							<SSPDetails:SSPBlock id="SSPblock"/>
+							<SSPDetails:SSPBlock id="SSPBlock"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			
+			<ObjectPageSection id="BenefitDetails" title="Benefit Details">
+				<subSections>
+					<ObjectPageSubSection id="BenefitDetailsSS" title=" ">
+						<blocks>
+							<SSPDetails:SSPBlock id="BenefitBlock"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			
+			<ObjectPageSection id="PartnerDetails" title="Partner Details">
+				<subSections>
+					<ObjectPageSubSection id="PartnerDetailsSS" title=" ">
+						<blocks>
+							<SSPDetails:SSPBlock id="PartnerBlock"/>
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
