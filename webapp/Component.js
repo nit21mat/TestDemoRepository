@@ -8,7 +8,20 @@ sap.ui.define([
 	return UIComponent.extend("com.acc.trainingTestDemo.Component", {
 
 		metadata: {
-			manifest: "json"
+			manifest: "json",
+			config: {
+				sample: {
+					stretch: true,
+					files: [
+						"./SharedBlocks/BenefitDetails/BenefitBlock.js",
+						"./SharedBlocks/BenefitDetails/BenefitBlock.view.xml",
+						"./SharedBlocks/PartiesInvolved/PartiesBlock.js",
+						"./SharedBlocks/PartiesInvolved/PartiesBlock.view.xml",
+						"./SharedBlocks/SSPDetails/SSPBlock.js",
+						"./SharedBlocks/SSPDetails/SSPBlock.view.xml"
+					]
+				}
+			}
 		},
 
 		/**
