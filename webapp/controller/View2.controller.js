@@ -13,8 +13,13 @@ sap.ui.define([
                                                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
                                                 oRouter.getRoute("View2").attachPatternMatched(this._onObjectMatched, this);
                                                 // set data model on view
-
-                                },
+                                                
+                                                var aFilters = [],
+                                                aFilters.push(new Filter("Soaid", FilterOperator.EQ, Value, "{/soaHeader/soaId}"));
+                                                var oList = this.getView().byId("SSPDetails");
+		                                     	var oBinding = oList.getBinding("items");
+	                                    		oBinding.filter(aFilter);
+                                                },
 
                                 onExit: function() {
                                                 //Do Nothing

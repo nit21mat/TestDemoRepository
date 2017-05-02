@@ -5,16 +5,18 @@
 		   xmlns:SSPDetails="com.acc.trainingTestDemo.SharedBlocks.SSPDetails"
 		   height="100%"
 		  >
- 
+	
 	<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
 		<headerTitle>
-			<ObjectPageHeader objectTitle="SOA ID"
+			<ObjectPageHeader objectTitle="Social Application"
 							  objectSubtitle="SOA Number" >
 	    </ObjectPageHeader>
 		</headerTitle>
  
 		<headerContent>
-			<m:ObjectAttribute title="" text="SOA Details"/>
+			<m:ObjectAttribute title="SSP ID" text="{ path: '/SOAHeaderDetailsSet', sorter: { path: 'Sspid' } }"/>
+			<m:ObjectAttribute title="SOA Status" text="{ path: '/SOAHeaderDetailsSet', sorter: { path: 'Soastatus' } }"/>
+			<m:ObjectAttribute title="Case ID" text="{ path: '/SOAHeaderDetailsSet', sorter: { path: 'Caselink' } }"/>
 		</headerContent>
 		
 	 	<sections>
