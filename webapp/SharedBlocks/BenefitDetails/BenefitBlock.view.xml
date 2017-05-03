@@ -1,17 +1,57 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m">
-	<forms:SimpleForm
-			maxContainerCols="1"
-			layout="ResponsiveGridLayout"
-			width="100%">
-		<layout:VerticalLayout>
-			<Label text="Evangelize the UI framework accross the company" design="Bold"/>
-			<Text text="4 days overdue Cascaded"/>
-			<Text text=" "/>
-			<Label text="Get trained in development management direction" design="Bold"/>
-			<Text text="Due Nov 21"/>
-			<Text text=" "/>
-			<Label text="Mentor junior developers" design="Bold"/>
-			<Text text="Due Dec 31 Cascaded"/>
-		</layout:VerticalLayout>
-	</forms:SimpleForm>
+	<!--<forms:SimpleForm-->
+	<!--		maxContainerCols="1"-->
+	<!--		layout="ResponsiveGridLayout"-->
+	<!--		width="100%">-->
+	<!--<layout:VerticalLayout>-->
+	<!--	<Label text="Evangelize the UI framework accross the company" design="Bold"/>-->
+	<!--	<Text text="4 days overdue Cascaded"/>-->
+	<!--	<Text text=" "/>-->
+	<!--	<Label text="Get trained in development management direction" design="Bold"/>-->
+	<!--	<Text text="Due Nov 21"/>-->
+	<!--	<Text text=" "/>-->
+	<!--	<Label text="Mentor junior developers" design="Bold"/>-->
+	<!--	<Text text="Due Dec 31 Cascaded"/>-->
+	<!--</layout:VerticalLayout>-->
+		<Table id="BenefitTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
+			items="{ path: '/SOASearchResult_BenefitDetailsSet', sorter: { path: 'SoaIdRes' } }">
+			<!--<headerToolbar>-->
+			<!--	<Toolbar>-->
+			<!--		<Title text="SOA Results" level="H2"/>-->
+			<!--	</Toolbar>-->
+			<!--</headerToolbar>-->
+			<columns>
+				<Column width="12em">
+					<Text text="Benefit"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true">
+					<Text text="Description"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+					<Text text="Start Date"/>
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+					<Text text="End Date"/>
+				</Column>
+				<Column hAlign="Center">
+					<Text text="Status"/>
+				</Column>
+				<Column hAlign="Center">
+					<Text text="SOA Ref"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem type="Navigation" press="onSelectionChange">
+					<cells>
+						<ObjectIdentifier text="{Orderedprod}"/>
+						<Text text="{Description}"/>
+						<Text text="{ path : 'Startdate', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+						<Text text="{ path : 'Enddate', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+						<Text text="{BenefitStatus}"/>
+						<Text text="{Soaref}"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	<!--</forms:SimpleForm>-->
 </mvc:View>
