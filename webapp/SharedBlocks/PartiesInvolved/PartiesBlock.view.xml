@@ -16,7 +16,7 @@
 <!--	</forms:SimpleForm>-->
 <!--</mvc:View>-->
 <Table id="PartiesTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
-			items="{ path: '/SOASearchResult__PartnerFunctions', sorter: { path: 'SoaIdRes' } }">
+			items="{ path: '/SOAPartnerFunctionsSet', sorter: { path: 'Partnerid' } }">
 			<columns>
 				<Column width="12em">
 					<Text text="Partner No"/>

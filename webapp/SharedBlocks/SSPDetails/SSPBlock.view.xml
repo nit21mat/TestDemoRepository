@@ -14,7 +14,7 @@
 	<!--		<Text text="Due Dec 31 Cascaded"/>-->
 	<!--	</layout:VerticalLayout>-->
 <Table id="SSPTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
-			items="{ path: '/SOASearchResult_SSPHeaderDetails', sorter: { path: 'SoaIdRes' } }">
+			items="{ path: '/SSPHeaderDetailsSet', sorter: { path: 'Soaref' } }">
 			<columns>
 				<Column width="12em">
 					<Text text="SSP No"/>

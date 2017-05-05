@@ -14,7 +14,7 @@
 	<!--	<Text text="Due Dec 31 Cascaded"/>-->
 	<!--</layout:VerticalLayout>-->
 		<Table id="BenefitTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
-			items="{ path: '/SOASearchResult_BenefitDetailsSet', sorter: { path: 'SoaIdRes' } }">
+			items="{ path: '/SOABenefitsSet', sorter: { path: 'Orderedprod' } }">
 			<!--<headerToolbar>-->
 			<!--	<Toolbar>-->
 			<!--		<Title text="SOA Results" level="H2"/>-->

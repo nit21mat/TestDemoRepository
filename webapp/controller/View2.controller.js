@@ -22,17 +22,17 @@ sap.ui.define([
 			var ssoaId = oEvent.getParameter("arguments").soaId;
 			var oKeyParams = {
 				Soaid: ssoaId
-			};
+			};	
 			var sViewPath = oModel.createKey("/SOAHeaderDetailsSet", oKeyParams);
 			this.getView().bindElement({
 				path: sViewPath
 			});
-			var oItemTemplate; // To be defined
-			this._getSOAPartnerFunctionsTable().bindItems({
-				path: sViewPath + "/SOAPartnerFunctionsSet",
-				template: oItemTemplate,
-				templateShareable: false
-			});
+			// var oItemTemplate; // To be defined
+			// this._getSOAPartnerFunctionsTable().bindItems({
+			// path: sViewPath + "/SOAPartnerFunctionsSet",
+			// template: oItemTemplate,
+			// templateShareable: false
+			// });
 		},
 		_getSOAPartnerFunctionsTable: function() {
 			return this.byId("ssptableid");
