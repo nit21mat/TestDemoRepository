@@ -1,7 +1,4 @@
-//sap.ui.define(['sap/uxap/BlockBase'], function(BlockBase) {
-//	"use strict";
-	
-	sap.ui.define([
+  	sap.ui.define([
 	'sap/uxap/BlockBase',
 	'jquery.sap.global',
 	'sap/ui/core/mvc/Controller',
