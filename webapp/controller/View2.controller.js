@@ -10,22 +10,22 @@ sap.ui.define([
 	"use strict";
 	var sViewPath;
 	return Controller.extend("com.acc.trainingTestDemo.controller.View2", {
-		
+
 		onInit: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("View2").attachPatternMatched(this._onObjectMatched, this);
 
 		},
-		onAfterRendering : function(oEvent){
-	/*		this._getSOAPartnerFunctionsTable().bindItems({
-				path: this.sViewPath + "/SOAPartnerFunctionsSet"
-			});
-			this._getSOABenefitTable().bindItems({
-				path: this.sViewPath + "/SOABenefitsSet"
-			});
-			this._getSOASSPTable().bindItems({
-				path: this.sViewPath + "/SSPHeaderDetailsSet"
-			});*/
+		onAfterRendering: function(oEvent) {
+			/*		this._getSOAPartnerFunctionsTable().bindItems({
+						path: this.sViewPath + "/SOAPartnerFunctionsSet"
+					});
+					this._getSOABenefitTable().bindItems({
+						path: this.sViewPath + "/SOABenefitsSet"
+					});
+					this._getSOASSPTable().bindItems({
+						path: this.sViewPath + "/SSPHeaderDetailsSet"
+					});*/
 		},
 		onExit: function() {
 			//Do Nothing
@@ -40,46 +40,21 @@ sap.ui.define([
 			this.getView().bindElement({
 				path: this.sViewPath
 			});
-			this.oObjectPageLayout = this.getView().byId("ObjectPageLayout");
-
-		/*	this._getSOAPartnerFunctionsTable().bindItems({
-				path: this.sViewPath + "/SOAPartnerFunctionsSet"
-			});
-			this._getSOABenefitTable().bindItems({
-				path: this.sViewPath + "/SOABenefitsSet"
-			});
-			this._getSOASSPTable().bindItems({
-				path: this.sViewPath + "/SSPHeaderDetailsSet"
-			});*/
-
 		},
-		_getSOAPartnerFunctionsTable: function() {
-<<<<<<< HEAD
-			return this.byId("PartiesTable");
-		},
-		_getSOABenefitTable: function() {
-			return this.byId("BenefitTable");
-		},
-		_getSOASSPTable: function() {
-			return this.byId("SSPTable");
-=======
-			return this.byId("ssptableid");
-		},
-		handleLink1Press: function (oEvent) {
+		handleLink1Press: function(oEvent) {
 			var msg = 'SOA Search Page',
 				msgToast = MessageToast;
 			msgToast.show(msg);
 		},
-		handleLink2Press: function (oEvent) {
+		handleLink2Press: function(oEvent) {
 			var msg = 'SSP Details Page',
 				msgToast = MessageToast;
 			msgToast.show(msg);
 		},
-		
-		onBackPress: function (oEvent) {
+
+		onBackPress: function(oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("View1");
->>>>>>> branch 'master' of https://github.com/nit21mat/TestDemoRepository.git
 		}
 	});
 
