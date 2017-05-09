@@ -1,99 +1,84 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m">
-	<!--<forms:SimpleForm-->
-	<!--		maxContainerCols="1"-->
-	<!--		layout="ResponsiveGridLayout"-->
-	<!--		width="100%">-->
-	<!--	<layout:VerticalLayout>-->
-	<!--		<Label text="Evangelize the UI framework accross the company" design="Bold"/>-->
-	<!--		<Text text="4 days overdue Cascaded"/>-->
-	<!--		<Text text=" "/>-->
-	<!--		<Label text="Get trained in development management direction" design="Bold"/>-->
-	<!--		<Text text="Due Nov 21"/>-->
-	<!--		<Text text=" "/>-->
-	<!--		<Label text="Mentor junior developers" design="Bold"/>-->
-	<!--		<Text text="Due Dec 31 Cascaded"/>-->
-	<!--	</layout:VerticalLayout>-->
-<Table id="SSPTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
-			items="{ path: '/SSPHeaderDetailsSet', sorter: { path: 'Soaref' } }">
-			<columns>
-				<Column width="12em">
-					<Text text="SSP No"/>
-				</Column>
-				<Column minScreenWidth="Tablet" demandPopin="true">
-					<Text text="Description"/>
-				</Column>
-				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
-					<Text text="Start Date"/>
-				</Column>
-				<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-					<Text text="End Date"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="Status"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="SOA Ref"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="Status Desc"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="Amount"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="Eligibility Status"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="Emp Resp No"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="Emp Resp Name"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="DBA Link"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="DBA Status"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="DBA Status Desc"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="Applicant No"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="Applicant Name"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="SOA Ref"/>
-				</Column>
-				<Column hAlign="Center">
-					<Text text="Case No"/>
-				</Column>
-			</columns>
-			<items>
-				<ColumnListItem type="Navigation" press="onSelectionChange">
-					<cells>
-						<ObjectIdentifier text="{Sspid}"/>
-						<Text text="{Description}"/>
-						<Text text="{ path : 'Datecontstart', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-						<Text text="{ path : 'Datecontend', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-						<Text text="{SspStatus}"/>
-						<Text text="{SspStatusText}"/>
-						<Text text="{Amount}"/>
-						<Text text="{Eligstatus}"/>
-						<Text text="{EmployeeResponsibleId}"/>
-						<Text text="{EmployeeResponsibleName}"/>
-						<Text text="{Dbalink}"/>
-						<Text text="{DbaStatus}"/>
-						<Text text="{DbaStatusText}"/>
-						<Text text="{Applicant}"/>
-						<Text text="{ApplicantName}"/>
-						<Text text="{Soaref}"/>
-						<Text text="{Caselink}"/>
-					</cells>
-				</ColumnListItem>
-			</items>
-		</Table>
+	<Table id="SSPTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false">
+		<columns>
+			<Column width="12em">
+				<Text text="SSP No"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true">
+				<Text text="Description"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+				<Text text="Start Date"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+				<Text text="End Date"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Status"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="SOA Ref"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Status Desc"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Amount"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Eligibility Status"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Emp Resp No"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Emp Resp Name"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="DBA Link"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="DBA Status"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="DBA Status Desc"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Applicant No"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Applicant Name"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="SOA Ref"/>
+			</Column>
+			<Column hAlign="Center">
+				<Text text="Case No"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier text="{SSP>Sspid}"/>
+					<Text text="{SSP>Description}"/>
+					<Text text="{ path : 'SSP>Datecontstart', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+					<Text text="{ path : 'SSP>Datecontend', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+					<Text text="{SSP>SspStatus}"/>
+					<Text text="{SSP>SspStatusText}"/>
+					<Text text="{SSP>Amount}"/>
+					<Text text="{SSP>Eligstatus}"/>
+					<Text text="{SSP>EmployeeResponsibleId}"/>
+					<Text text="{SSP>EmployeeResponsibleName}"/>
+					<Text text="{SSP>Dbalink}"/>
+					<Text text="{SSP>DbaStatus}"/>
+					<Text text="{SSP>DbaStatusText}"/>
+					<Text text="{SSP>Applicant}"/>
+					<Text text="{SSP>ApplicantName}"/>
+					<Text text="{SSP>Soaref}"/>
+					<Text text="{SSP>Caselink}"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
 	<!--</forms:SimpleForm>-->
 </mvc:View>

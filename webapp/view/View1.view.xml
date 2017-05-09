@@ -83,7 +83,7 @@
 				</fb:FilterBar>
 			</l:VerticalLayout>
 			<Table id="soaTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
-				items="{ path: '/SOASearchResultSet', sorter: { path: 'SoaIdRes' } }">
+				items="{ path: 'soaModel>/SOASearchResultSet', sorter: { path: 'SoaIdRes' } }">
 				<headerToolbar>
 					<Toolbar>
 						<Title text="SOA Results" level="H2"/>
@@ -112,26 +112,12 @@
 				<items>
 					<ColumnListItem type="Navigation" press="onSelectionChange">
 						<cells>
-							<ObjectIdentifier text="{SoaIdRes}"/>
-							<Text text="{ApplicantNameRes}"/>
-							<Text text="{ path : 'ValidFromRes', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-							<Text text="{ path : 'ValidToRes', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-							<Text text="{ApplicantRes}"/>
-							<Text text="{StatusRes}"/>
-							<!--<ObjectNumber-->
-							<!--	number="{WeightMeasure}"-->
-							<!--	unit="{WeightUnit}"-->
-							<!--	state="{-->
-							<!--		path: 'WeightMeasure',-->
-							<!--		formatter: 'sap.m.sample.Table.Formatter.weightState'-->
-							<!--	}" />-->
-							<!--<ObjectNumber-->
-							<!--		number="{-->
-							<!--			parts:[{path:'Price'},{path:'CurrencyCode'}],-->
-							<!--			type: 'sap.ui.model.type.Currency',-->
-							<!--			formatOptions: {showMeasure: false}-->
-							<!--		}"-->
-							<!--		unit="{CurrencyCode}" />-->
+							<ObjectIdentifier text="{soaModel>SoaIdRes}"/>
+							<Text text="{soaModel>ApplicantNameRes}"/>
+							<Text text="{ path : 'soaModel>ValidFromRes', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+							<Text text="{ path : 'soaModel>ValidToRes', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+							<Text text="{soaModel>ApplicantRes}"/>
+							<Text text="{soaModel>StatusRes}"/>
 						</cells>
 					</ColumnListItem>
 				</items>

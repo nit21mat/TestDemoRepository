@@ -80,7 +80,7 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"dataSource": "status_alias"
 			},
-			"": {
+			"soaModel": {
 				"dataSource": "ZSOA_SEARCH_DETAILS_SRV",
 				"settings": {
 					"defaultBindingMode": "TwoWay",

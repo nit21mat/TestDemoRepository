@@ -35,13 +35,9 @@ sap.ui.define([
 		},
 
 		onSelectionChange: function(oEvent) {
-			/*			var item = oEvent.getSource().getBindingContext().getObject();
-						var soaid = item.SoaIdRes;
-						var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-						oRouter.navTo("View2");*/
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("View2", {
-				soaId: oEvent.getSource().getBindingContext().getObject().SoaIdRes
+				soaId: oEvent.getSource().getBindingContext("soaModel").getObject().SoaIdRes
 			});
 		},
 
@@ -132,12 +128,6 @@ sap.ui.define([
 			this._filterTable(this._createFilters(this._getFilterBar()));
 		},
 		_filterTable: function(aFilters) {
-			/*TODO:needs to be refactored during retrofit, try to replace 
-  	  			bindAggregation with filter on rows binding*/
-			/*	this._getSoaTable().bindAggregation("items", {
-					path: '/SOASearchResultSet',
-					filters: aFilters
-				});*/
 			var oItemBinding = this._getSoaTable().getBinding("items");
 			oItemBinding.filter(aFilters);
 

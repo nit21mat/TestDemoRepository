@@ -1,29 +1,28 @@
 <core:View xmlns:core="sap.ui.core" xmlns="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:m="sap.m"
 	xmlns:SSPDetails="com.acc.trainingTestDemo.SharedBlocks.SSPDetails"
 	xmlns:BenefitDetails="com.acc.trainingTestDemo.SharedBlocks.BenefitDetails"
-	xmlns:PartiesInvolved="com.acc.trainingTestDemo.SharedBlocks.PartiesInvolved"
-	height="100%"
+	xmlns:PartiesInvolved="com.acc.trainingTestDemo.SharedBlocks.PartiesInvolved" height="100%"
 	controllerName="com.acc.trainingTestDemo.controller.View2">
 	<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
 		<headerTitle>
 			<ObjectPageHeader objectTitle="Social Application"></ObjectPageHeader>
 		</headerTitle>
 		<headerContent>
-			<!--			<m:ObjectAttribute title="SSP ID" text="{ path: '/SOAHeaderDetailsSet', sorter: { path: 'Sspid' } }"/>
-			<m:ObjectAttribute title="SOA Status" text="{ path: '/SOAHeaderDetailsSet', sorter: { path: 'Soastatus' } }"/>
-			<m:ObjectAttribute title="Case ID" text="{ path: '/SOAHeaderDetailsSet', sorter: { path: 'Caselink' } }"/>
--->
-			<m:ObjectAttribute title="Soa Id" text="{Soaid}"/>
-			<m:ObjectAttribute title="SSP ID" text="{Sspid}"/>
-			<m:ObjectAttribute title="SOA Status" text="{Soastatustext}"/>
-			<m:ObjectAttribute title="Case ID" text="{Caselink}"/>
+			<m:ObjectAttribute title="Soa Id" text="{soaModel>/SOAHeaderDetails/Soaid}"/>
+			<m:ObjectAttribute title="SSP ID" text="{soaModel>/SOAHeaderDetails/Sspid}"/>
+			<m:ObjectAttribute title="SOA Status" text="{soaModel>/SOAHeaderDetails/Soastatustext}"/>
+			<m:ObjectAttribute title="Case ID" text="{soaModel>/SOAHeaderDetails/Caselink}"/>
 		</headerContent>
 		<sections>
 			<ObjectPageSection id="SSPDetails" title="SSP Details">
 				<subSections>
 					<ObjectPageSubSection id="SSPDetailsSS" title=" ">
 						<blocks>
-							<SSPDetails:SSPBlock id="SSPBlock"/>
+							<SSPDetails:SSPBlock id="SSPBlock">
+								<SSPDetails:mappings>
+									<ModelMapping externalModelName="soaModel" externalPath="{sViewPath}/SSPHeaderDetailsSet" internalModelName="SSP"/>
+								</SSPDetails:mappings>
+							</SSPDetails:SSPBlock>
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
@@ -32,18 +31,24 @@
 				<subSections>
 					<ObjectPageSubSection id="BenefitDetailsSS" title=" ">
 						<blocks>
-							<!--<SSPDetails:SSPBlock id="BenefitBlock"/>-->
-							<BenefitDetails:BenefitBlock id="BenefitBlock"/>
+							<BenefitDetails:BenefitBlock id="BenefitBlock">
+								<BenefitDetails:mappings>
+									<ModelMapping externalModelName="soaModel" externalPath="{sViewPath}/SOABenefitsSet" internalModelName="Benefits"/>
+								</BenefitDetails:mappings>
+							</BenefitDetails:BenefitBlock>
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
 			</ObjectPageSection>
 			<ObjectPageSection id="PartnerDetails" title="Partner Details">
 				<subSections>
-					<ObjectPageSubSection id="PartnerDetailsSS" title=" ">
+					<ObjectPageSubSection id="PartnerDetailsSS" title="">
 						<blocks>
-							<!--<SSPDetails:SSPBlock id="PartnerBlock"/>-->
-							<PartiesInvolved:PartiesBlock id="PartnerBlock"/>
+							<PartiesInvolved:PartiesBlock id="PartnerBlock">
+								<PartiesInvolved:mappings>
+									<ModelMapping externalModelName="soaModel" externalPath="{sViewPath}/SOAPartnerFunctionsSet" internalModelName="PartnerFunction"/>
+								</PartiesInvolved:mappings>
+							</PartiesInvolved:PartiesBlock>
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>

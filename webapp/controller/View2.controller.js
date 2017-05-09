@@ -7,35 +7,59 @@ sap.ui.define([
 
 ], function(jQuery, Controller, UIComponent, Fragment, JSONModel) {
 	"use strict";
+	var sViewPath;
 	return Controller.extend("com.acc.trainingTestDemo.controller.View2", {
-
+		
 		onInit: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("View2").attachPatternMatched(this._onObjectMatched, this);
-		},
 
+		},
+		onAfterRendering : function(oEvent){
+	/*		this._getSOAPartnerFunctionsTable().bindItems({
+				path: this.sViewPath + "/SOAPartnerFunctionsSet"
+			});
+			this._getSOABenefitTable().bindItems({
+				path: this.sViewPath + "/SOABenefitsSet"
+			});
+			this._getSOASSPTable().bindItems({
+				path: this.sViewPath + "/SSPHeaderDetailsSet"
+			});*/
+		},
 		onExit: function() {
 			//Do Nothing
 		},
 		_onObjectMatched: function(oEvent) {
-			var oModel = this.getView().getModel();
+			var oModel = this.getView().getModel("soaModel");
 			var ssoaId = oEvent.getParameter("arguments").soaId;
 			var oKeyParams = {
 				Soaid: ssoaId
-			};	
-			var sViewPath = oModel.createKey("/SOAHeaderDetailsSet", oKeyParams);
+			};
+			this.sViewPath = oModel.createKey("/SOAHeaderDetailsSet", oKeyParams);
 			this.getView().bindElement({
-				path: sViewPath
+				path: this.sViewPath
 			});
-			// var oItemTemplate; // To be defined
-			// this._getSOAPartnerFunctionsTable().bindItems({
-			// path: sViewPath + "/SOAPartnerFunctionsSet",
-			// template: oItemTemplate,
-			// templateShareable: false
-			// });
+			this.oObjectPageLayout = this.getView().byId("ObjectPageLayout");
+
+		/*	this._getSOAPartnerFunctionsTable().bindItems({
+				path: this.sViewPath + "/SOAPartnerFunctionsSet"
+			});
+			this._getSOABenefitTable().bindItems({
+				path: this.sViewPath + "/SOABenefitsSet"
+			});
+			this._getSOASSPTable().bindItems({
+				path: this.sViewPath + "/SSPHeaderDetailsSet"
+			});*/
+
 		},
 		_getSOAPartnerFunctionsTable: function() {
-			return this.byId("ssptableid");
+			return this.byId("PartiesTable");
+		},
+		_getSOABenefitTable: function() {
+			return this.byId("BenefitTable");
+		},
+		_getSOASSPTable: function() {
+			return this.byId("SSPTable");
 		}
 	});
 
