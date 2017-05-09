@@ -24,10 +24,10 @@
 			</ObjectPageHeader>
 		</headerTitle>
 		<headerContent>
-			<m:ObjectAttribute title="Soa Id" text="{soaModel>/SOAHeaderDetails/Soaid}"/>
-			<m:ObjectAttribute title="SSP ID" text="{soaModel>/SOAHeaderDetails/Sspid}"/>
-			<m:ObjectAttribute title="SOA Status" text="{soaModel>/SOAHeaderDetails/Soastatustext}"/>
-			<m:ObjectAttribute title="Case ID" text="{soaModel>/SOAHeaderDetails/Caselink}"/>
+			<m:ObjectAttribute title="Soa Id" text="{soaModel>Soaid}"/>
+			<m:ObjectAttribute title="SSP ID" text="{soaModel>Sspid}"/>
+			<m:ObjectAttribute title="SOA Status" text="{soaModel>Soastatustext}"/>
+			<m:ObjectAttribute title="Case ID" text="{soaModel>Caselink}"/>
 		</headerContent>
 		<sections>
 			<ObjectPageSection id="SSPDetails" title="SSP Details">
@@ -36,7 +36,7 @@
 						<blocks>
 							<SSPDetails:SSPBlock id="SSPBlock">
 								<SSPDetails:mappings>
-									<ModelMapping externalModelName="soaModel" externalPath="{sViewPath}/SSPHeaderDetailsSet" internalModelName="SSP"/>
+									<ModelMapping externalModelName="soaModel" externalPath="/SOAHeaderDetailsSet('1000476')/SSPHeaderDetailsSet" internalModelName="SSP"/>
 								</SSPDetails:mappings>
 							</SSPDetails:SSPBlock>
 						</blocks>
@@ -49,7 +49,7 @@
 						<blocks>
 							<BenefitDetails:BenefitBlock id="BenefitBlock">
 								<BenefitDetails:mappings>
-									<ModelMapping externalModelName="soaModel" externalPath="{sViewPath}/SOABenefitsSet" internalModelName="Benefits"/>
+									<ModelMapping externalModelName="soaModel" externalPath="/SOAHeaderDetailsSet('1000476')/SOABenefitsSet" internalModelName="Benefits"/>
 								</BenefitDetails:mappings>
 							</BenefitDetails:BenefitBlock>
 						</blocks>
@@ -62,7 +62,7 @@
 						<blocks>
 							<PartiesInvolved:PartiesBlock id="PartnerBlock">
 								<PartiesInvolved:mappings>
-									<ModelMapping externalModelName="soaModel" externalPath="{sViewPath}/SOAPartnerFunctionsSet" internalModelName="PartnerFunction"/>
+									<ModelMapping externalModelName="soaModel" externalPath="/SOAHeaderDetailsSet('1000476')/SOAPartnerFunctionsSet" internalModelName="PartnerFunction"/>
 								</PartiesInvolved:mappings>
 							</PartiesInvolved:PartiesBlock>
 						</blocks>

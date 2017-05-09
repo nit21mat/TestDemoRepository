@@ -14,7 +14,7 @@ sap.ui.define([
 		onInit: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("View2").attachPatternMatched(this._onObjectMatched, this);
-
+			alert(this.sViewPath);
 		},
 		onAfterRendering: function(oEvent) {
 			/*		this._getSOAPartnerFunctionsTable().bindItems({
@@ -38,7 +38,8 @@ sap.ui.define([
 			};
 			this.sViewPath = oModel.createKey("/SOAHeaderDetailsSet", oKeyParams);
 			this.getView().bindElement({
-				path: this.sViewPath
+				path: this.sViewPath,
+				model: "soaModel"
 			});
 		},
 		handleLink1Press: function(oEvent) {
