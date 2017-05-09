@@ -1,6 +1,6 @@
 <mvc:View controllerName="com.acc.trainingTestDemo.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
 	displayBlock="true" xmlns="sap.m" height="100%" xmlns:fb="sap.ui.comp.filterbar" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
-	<Page title="Social Application List" class="sapUiContentPadding" showNavButton="true" enableScrolling="true">
+	<Page title="Social Application List" class="sapUiContentPadding" showNavButton="false" enableScrolling="true">
 		<content height="100%" width="100%" horizontal="true" vertical="true" focusable="true">
 			<l:VerticalLayout width="100%">
 				<Label text="SOA Search"/>

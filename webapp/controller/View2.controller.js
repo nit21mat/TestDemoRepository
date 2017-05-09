@@ -3,9 +3,10 @@ sap.ui.define([
 	'sap/ui/core/mvc/Controller',
 	'sap/ui/core/UIComponent',
 	'sap/ui/core/Fragment',
-	'sap/ui/model/json/JSONModel'
+	'sap/ui/model/json/JSONModel',
+	'sap/m/MessageToast'
 
-], function(jQuery, Controller, UIComponent, Fragment, JSONModel) {
+], function(jQuery, Controller, UIComponent, Fragment, JSONModel, MessageToast) {
 	"use strict";
 	var sViewPath;
 	return Controller.extend("com.acc.trainingTestDemo.controller.View2", {
@@ -53,6 +54,7 @@ sap.ui.define([
 
 		},
 		_getSOAPartnerFunctionsTable: function() {
+<<<<<<< HEAD
 			return this.byId("PartiesTable");
 		},
 		_getSOABenefitTable: function() {
@@ -60,6 +62,24 @@ sap.ui.define([
 		},
 		_getSOASSPTable: function() {
 			return this.byId("SSPTable");
+=======
+			return this.byId("ssptableid");
+		},
+		handleLink1Press: function (oEvent) {
+			var msg = 'SOA Search Page',
+				msgToast = MessageToast;
+			msgToast.show(msg);
+		},
+		handleLink2Press: function (oEvent) {
+			var msg = 'SSP Details Page',
+				msgToast = MessageToast;
+			msgToast.show(msg);
+		},
+		
+		onBackPress: function (oEvent) {
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("View1");
+>>>>>>> branch 'master' of https://github.com/nit21mat/TestDemoRepository.git
 		}
 	});
 

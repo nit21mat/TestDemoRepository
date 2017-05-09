@@ -1,11 +1,27 @@
-<core:View xmlns:core="sap.ui.core" xmlns="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:m="sap.m"
-	xmlns:SSPDetails="com.acc.trainingTestDemo.SharedBlocks.SSPDetails"
+<mvc:View xmlns:core="sap.ui.core" xmlns="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:page="m:page" xmlns:SSPDetails="com.acc.trainingTestDemo.SharedBlocks.SSPDetails"
 	xmlns:BenefitDetails="com.acc.trainingTestDemo.SharedBlocks.BenefitDetails"
 	xmlns:PartiesInvolved="com.acc.trainingTestDemo.SharedBlocks.PartiesInvolved" height="100%"
 	controllerName="com.acc.trainingTestDemo.controller.View2">
 	<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false">
 		<headerTitle>
-			<ObjectPageHeader objectTitle="Social Application"></ObjectPageHeader>
+			<ObjectPageHeader objectTitle="Social Application">
+				<!--<actions>-->
+				<!--	<ObjectPageHeaderActionButton type="Back" importance="Low"/>-->
+				<!--</actions>-->
+				<navigationBar>
+					<m:Bar>
+						<m:contentLeft>
+							<m:Button icon="sap-icon://nav-back" tooltip="Back" press="onBackPress">
+							</m:Button>
+						</m:contentLeft>
+						</m:Bar>
+				</navigationBar>
+				<breadCrumbsLinks>
+					<m:Link text="SOA Search Page" press="handleLink1Press"/>
+					<m:Link text="SSP Details Page" press="handleLink2Press"/>
+				</breadCrumbsLinks>
+			</ObjectPageHeader>
 		</headerTitle>
 		<headerContent>
 			<m:ObjectAttribute title="Soa Id" text="{soaModel>/SOAHeaderDetails/Soaid}"/>
@@ -55,4 +71,4 @@
 			</ObjectPageSection>
 		</sections>
 	</ObjectPageLayout>
-</core:View>
+</mvc:View>
