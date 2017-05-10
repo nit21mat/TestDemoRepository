@@ -1,5 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m">
-	<Table id="SSPTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false">
+	<Table id="SSPTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false" 
+	items="{path : 'soaModel>/SSPHeaderDetailsSet', filters : [{path : 'Soaref', operator : 'EQ',value1: '1000480'}]}">
 		<columns>
 			<Column width="12em">
 				<Text text="SSP No"/>
@@ -59,23 +60,23 @@
 		<items>
 			<ColumnListItem>
 				<cells>
-					<ObjectIdentifier text="{SSP>Sspid}"/>
-					<Text text="{SSP>Description}"/>
-					<Text text="{ path : 'SSP>Datecontstart', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-					<Text text="{ path : 'SSP>Datecontend', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-					<Text text="{SSP>SspStatus}"/>
-					<Text text="{SSP>SspStatusText}"/>
-					<Text text="{SSP>Amount}"/>
-					<Text text="{SSP>Eligstatus}"/>
-					<Text text="{SSP>EmployeeResponsibleId}"/>
-					<Text text="{SSP>EmployeeResponsibleName}"/>
-					<Text text="{SSP>Dbalink}"/>
-					<Text text="{SSP>DbaStatus}"/>
-					<Text text="{SSP>DbaStatusText}"/>
-					<Text text="{SSP>Applicant}"/>
-					<Text text="{SSP>ApplicantName}"/>
-					<Text text="{SSP>Soaref}"/>
-					<Text text="{SSP>Caselink}"/>
+					<ObjectIdentifier text="{soaModel>Sspid}"/>
+					<Text text="{soaModel>Description}"/>
+					<Text text="{ path : 'soaModel>Datecontstart', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+					<Text text="{ path : 'soaModel>Datecontend', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+					<Text text="{soaModel>SspStatus}"/>
+					<Text text="{soaModel>SspStatusText}"/>
+					<Text text="{soaModel>Amount}"/>
+					<Text text="{soaModel>Eligstatus}"/>
+					<Text text="{soaModel>EmployeeResponsibleId}"/>
+					<Text text="{soaModel>EmployeeResponsibleName}"/>
+					<Text text="{soaModel>Dbalink}"/>
+					<Text text="{soaModel>DbaStatus}"/>
+					<Text text="{soaModel>DbaStatusText}"/>
+					<Text text="{soaModel>Applicant}"/>
+					<Text text="{soaModel>ApplicantName}"/>
+					<Text text="{soaModel>Soaref}"/>
+					<Text text="{soaModel>Caselink}"/>
 				</cells>
 			</ColumnListItem>
 		</items>

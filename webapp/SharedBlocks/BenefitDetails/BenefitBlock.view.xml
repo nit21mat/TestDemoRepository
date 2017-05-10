@@ -1,6 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m">
 		<Table id="BenefitTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
-			items="{ path: '/SOABenefitsSet', sorter: { path: 'Orderedprod' } }">
+		items="{path : 'soaModel>/SOABenefitsSet', filters : [{path : 'Soaref',operator : 'EQ',value1: '1000480'}]}">
 			<columns>
 				<Column width="12em">
 					<Text text="Benefit"/>
@@ -24,12 +24,12 @@
 			<items>
 				<ColumnListItem>
 					<cells>
-						<ObjectIdentifier text="{Orderedprod}"/>
-						<Text text="{Description}"/>
-						<Text text="{ path : 'Startdate', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-						<Text text="{ path : 'Enddate', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-						<Text text="{BenefitStatus}"/>
-						<Text text="{Soaref}"/>
+						<ObjectIdentifier text="{soaModel>Orderedprod}"/>
+						<Text text="{soaModel>Description}"/>
+						<Text text="{ path : 'soaModel>Startdate', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+						<Text text="{ path : 'soaModel>Enddate', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
+						<Text text="{soaModel>BenefitStatus}"/>
+						<Text text="{soaModel>Soaref}"/>
 					</cells>
 				</ColumnListItem>
 			</items>

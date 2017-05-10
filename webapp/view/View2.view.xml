@@ -35,9 +35,9 @@
 					<ObjectPageSubSection id="SSPDetailsSS" title=" ">
 						<blocks>
 							<SSPDetails:SSPBlock id="SSPBlock">
-								<SSPDetails:mappings>
-									<ModelMapping externalModelName="soaModel" externalPath="/SOAHeaderDetailsSet('1000476')/SSPHeaderDetailsSet" internalModelName="SSP"/>
-								</SSPDetails:mappings>
+							<!--	<SSPDetails:mappings>
+									<ModelMapping externalModelName="soaModel" externalPath="/SSPHeaderDetailsSet('1000476')" internalModelName="SSP"/>
+								</SSPDetails:mappings>-->
 							</SSPDetails:SSPBlock>
 						</blocks>
 					</ObjectPageSubSection>
@@ -48,9 +48,9 @@
 					<ObjectPageSubSection id="BenefitDetailsSS" title=" ">
 						<blocks>
 							<BenefitDetails:BenefitBlock id="BenefitBlock">
-								<BenefitDetails:mappings>
-									<ModelMapping externalModelName="soaModel" externalPath="/SOAHeaderDetailsSet('1000476')/SOABenefitsSet" internalModelName="Benefits"/>
-								</BenefitDetails:mappings>
+								<!--<BenefitDetails:mappings>
+									<ModelMapping externalModelName="soaModel" externalPath="/SOABenefitsSet('1000476')" internalModelName="Benefits"/>
+								</BenefitDetails:mappings>-->
 							</BenefitDetails:BenefitBlock>
 						</blocks>
 					</ObjectPageSubSection>
@@ -61,9 +61,9 @@
 					<ObjectPageSubSection id="PartnerDetailsSS" title="">
 						<blocks>
 							<PartiesInvolved:PartiesBlock id="PartnerBlock">
-								<PartiesInvolved:mappings>
-									<ModelMapping externalModelName="soaModel" externalPath="/SOAHeaderDetailsSet('1000476')/SOAPartnerFunctionsSet" internalModelName="PartnerFunction"/>
-								</PartiesInvolved:mappings>
+								<!--<PartiesInvolved:mappings>
+									<ModelMapping externalModelName="soaModel" externalPath="/SOAPartnerFunctionsSet(5')" internalModelName="PartnerFunction"/>
+								</PartiesInvolved:mappings>-->
 							</PartiesInvolved:PartiesBlock>
 						</blocks>
 					</ObjectPageSubSection>
