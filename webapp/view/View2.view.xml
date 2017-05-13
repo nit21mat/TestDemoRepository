@@ -18,8 +18,8 @@
 						</m:Bar>
 				</navigationBar>
 				<breadCrumbsLinks>
-					<m:Link text="SOA Search Page" press="handleLink1Press"/>
-					<m:Link text="SSP Details Page" press="handleLink2Press"/>
+				<!--	<m:Link text="SOA Search Page" press="handleLink1Press"/>
+					<m:Link text="SSP Details Page" press="handleLink2Press"/>-->
 				</breadCrumbsLinks>
 			</ObjectPageHeader>
 		</headerTitle>

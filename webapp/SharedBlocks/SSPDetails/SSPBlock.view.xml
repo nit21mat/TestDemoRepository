@@ -51,9 +51,6 @@
 				<Text text="Applicant Name"/>
 			</Column>
 			<Column hAlign="Center">
-				<Text text="SOA Ref"/>
-			</Column>
-			<Column hAlign="Center">
 				<Text text="Case No"/>
 			</Column>
 		</columns>
@@ -64,8 +61,9 @@
 					<Text text="{soaModel>Description}"/>
 					<Text text="{ path : 'soaModel>Datecontstart', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
 					<Text text="{ path : 'soaModel>Datecontend', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-					<Text text="{soaModel>SspStatus}"/>
 					<Text text="{soaModel>SspStatusText}"/>
+					<Text text="{soaModel>Soaref}"/>
+					<Text text="{soaModel>Amount}"/>
 					<Text text="{soaModel>Amount}"/>
 					<Text text="{soaModel>Eligstatus}"/>
 					<Text text="{soaModel>EmployeeResponsibleId}"/>
@@ -75,7 +73,6 @@
 					<Text text="{soaModel>DbaStatusText}"/>
 					<Text text="{soaModel>Applicant}"/>
 					<Text text="{soaModel>ApplicantName}"/>
-					<Text text="{soaModel>Soaref}"/>
 					<Text text="{soaModel>Caselink}"/>
 				</cells>
 			</ColumnListItem>
