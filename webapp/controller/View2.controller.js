@@ -9,22 +9,13 @@ sap.ui.define([
 ], function(jQuery, Controller, UIComponent, Fragment, JSONModel, MessageToast) {
 	"use strict";
 	var sViewPath;
+	var oSoaId;
+
 	return Controller.extend("com.acc.trainingTestDemo.controller.View2", {
 
 		onInit: function() {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("View2").attachPatternMatched(this._onObjectMatched, this);
-		},
-		onAfterRendering: function(oEvent) {
-			/*		this._getSOAPartnerFunctionsTable().bindItems({
-						path: this.sViewPath + "/SOAPartnerFunctionsSet"
-					});
-					this._getSOABenefitTable().bindItems({
-						path: this.sViewPath + "/SOABenefitsSet"
-					});
-					this._getSOASSPTable().bindItems({
-						path: this.sViewPath + "/SSPHeaderDetailsSet"
-					});*/
 		},
 		onExit: function() {
 			//Do Nothing
@@ -32,14 +23,18 @@ sap.ui.define([
 		_onObjectMatched: function(oEvent) {
 			var oModel = this.getView().getModel("soaModel");
 			var ssoaId = oEvent.getParameter("arguments").soaId;
+			sap.ui.getCore().AppContext = new Object();
+			sap.ui.getCore().AppContext.soaId = ssoaId;
 			var oKeyParams = {
-				Soaid: ssoaId
+				SoaIdRes: ssoaId
 			};
-			this.sViewPath = oModel.createKey("/SOAHeaderDetailsSet", oKeyParams);
+			// this.sViewPath = oModel.createKey("/SOAHeaderDetailsSet", oKeyParams);
+			this.sViewPath = oModel.createKey("/SOASearchResultSet", oKeyParams);
 			this.getView().bindElement({
 				path: this.sViewPath,
 				model: "soaModel"
 			});
+
 		},
 		_getSOAPartnerFunctionsTable: function() {
 			this.byId("PartiesTable");
@@ -59,6 +54,7 @@ sap.ui.define([
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("View1");
 		}
+
 	});
 
 });

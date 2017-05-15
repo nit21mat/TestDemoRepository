@@ -89,11 +89,9 @@
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		},
 		"routing": {
 			"config": {
@@ -103,18 +101,15 @@
 				"controlId": "app",
 				"controlAggregation": "pages"
 			},
-			"routes": [
-				{
-					"pattern": "",
-					"name": "View1",
-					"target": "View1"
-				},
-				{
-					"pattern": "View2/{soaId}",
-					"name": "View2",
-					"target": "View2"
-				}
-			],
+			"routes": [{
+				"pattern": "",
+				"name": "View1",
+				"target": "View1"
+			}, {
+				"pattern": "View2/{soaId}",
+				"name": "View2",
+				"target": "View2"
+			}],
 			"targets": {
 				"View1": {
 					"viewName": "View1"
