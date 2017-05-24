@@ -7,7 +7,7 @@
     "targetFolder": "dist",
     "sourceFolder": "webapp",
     "buildRequired": true,
-    "lastBuildDateTime": "Tue, 18 Apr 2017 13:46:16 GMT"
+    "lastBuildDateTime": "Thu, 18 May 2017 10:44:45 GMT"
   },
   "generation": [
     {
@@ -39,5 +39,9 @@
     "account": "p1176671trial",
     "name": "testdemorepository",
     "lastVersionWeTriedToDeploy": "1.0.0"
+  },
+  "deploy": {
+    "destination": "AccentureSSS",
+    "name": "ZTestDemo"
   }
 }

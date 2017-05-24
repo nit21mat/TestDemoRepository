@@ -65,6 +65,7 @@
 					<Text text="{ path : 'soaModel>Datecontstart', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
 					<Text text="{ path : 'soaModel>Datecontend', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
 					<Text text="{soaModel>SspStatus}"/>
+					<Text text="{soaModel>Soaref}"/>
 					<Text text="{soaModel>SspStatusText}"/>
 					<Text text="{soaModel>Amount}"/>
 					<Text text="{soaModel>Eligstatus}"/>
