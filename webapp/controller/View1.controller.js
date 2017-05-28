@@ -39,6 +39,7 @@ sap.ui.define([
 			oRouter.navTo("View2", {
 				soaId: oEvent.getSource().getBindingContext("soaModel").getObject().SoaIdRes
 			});
+			this.getView().getModel("soaModel").refresh();
 		},
 
 		onToggleSearchField: function(oEvent) {

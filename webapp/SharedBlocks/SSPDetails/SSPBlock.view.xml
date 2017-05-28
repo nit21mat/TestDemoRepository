@@ -1,6 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m">
-	<Table id="SSPTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false" 
-	items="{path : 'soaModel>/SSPHeaderDetailsSet', filters : [{path : 'Soaref', operator : 'EQ',value1: '1000480'}]}">
+	<Table id="SSPTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
+	items="{soaModel>SSPHeaderDetailsSet}">
 		<columns>
 			<Column width="12em">
 				<Text text="SSP No"/>
@@ -51,6 +51,9 @@
 				<Text text="Applicant Name"/>
 			</Column>
 			<Column hAlign="Center">
+				<Text text="SOA Ref"/>
+			</Column>
+			<Column hAlign="Center">
 				<Text text="Case No"/>
 			</Column>
 		</columns>
@@ -61,9 +64,9 @@
 					<Text text="{soaModel>Description}"/>
 					<Text text="{ path : 'soaModel>Datecontstart', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
 					<Text text="{ path : 'soaModel>Datecontend', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-					<Text text="{soaModel>SspStatusText}"/>
+					<Text text="{soaModel>SspStatus}"/>
 					<Text text="{soaModel>Soaref}"/>
-					<Text text="{soaModel>Amount}"/>
+					<Text text="{soaModel>SspStatusText}"/>
 					<Text text="{soaModel>Amount}"/>
 					<Text text="{soaModel>Eligstatus}"/>
 					<Text text="{soaModel>EmployeeResponsibleId}"/>
@@ -73,10 +76,10 @@
 					<Text text="{soaModel>DbaStatusText}"/>
 					<Text text="{soaModel>Applicant}"/>
 					<Text text="{soaModel>ApplicantName}"/>
+					<Text text="{soaModel>Soaref}"/>
 					<Text text="{soaModel>Caselink}"/>
 				</cells>
 			</ColumnListItem>
 		</items>
 	</Table>
-	<!--</forms:SimpleForm>-->
 </mvc:View>

@@ -1,6 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m">
 	<Table id="PartiesTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
-	items="{path : 'soaModel>/SOAPartnerFunctionsSet', filters : [{path : 'Soaref',operator : 'EQ',value1: '1000480'}]}">
+	items="{soaModel>SOAPartnerFunctions}">
 			<columns>
 				<Column width="12em">
 					<Text text="Partner No"/>
