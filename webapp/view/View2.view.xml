@@ -24,6 +24,7 @@
 		<headerContent>
 			<m:ObjectAttribute title="Soa Id" text="{soaModel>Soaid}" binding="{soaModel>SOAHeaderDetails}"/>
 			<m:ObjectAttribute title="SSP ID" text="{soaModel>Sspid}" binding="{soaModel>SOAHeaderDetails}"/>
+			<m:ObjectAttribute title="SOA Description" text="{soaModel>Description}" binding="{soaModel>SOAHeaderDetails}"/>
 			<m:ObjectAttribute title="SOA Status" text="{soaModel>Soastatustext}" binding="{soaModel>SOAHeaderDetails}"/>
 			<m:ObjectAttribute title="Case ID" text="{soaModel>Caselink}" binding="{soaModel>SOAHeaderDetails}"/>
 		</headerContent>
