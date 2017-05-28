@@ -1,3 +1,3 @@
 My New Feature File
 
-Second future branch
+future branch
