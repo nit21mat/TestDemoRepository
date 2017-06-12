@@ -1,85 +1,39 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:forms="sap.ui.layout.form" xmlns="sap.m">
-	<Table id="SSPTable" inset="false" growing="true" growingThreshold="10" growingScrollToLoad="false"
-	items="{soaModel>SSPHeaderDetailsSet}">
-		<columns>
-			<Column width="12em">
-				<Text text="SSP No"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true">
-				<Text text="Description"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
-				<Text text="Start Date"/>
-			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
-				<Text text="End Date"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="Status"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="SOA Ref"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="Status Desc"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="Amount"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="Eligibility Status"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="Emp Resp No"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="Emp Resp Name"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="DBA Link"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="DBA Status"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="DBA Status Desc"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="Applicant No"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="Applicant Name"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="SOA Ref"/>
-			</Column>
-			<Column hAlign="Center">
-				<Text text="Case No"/>
-			</Column>
-		</columns>
-		<items>
-			<ColumnListItem>
-				<cells>
-					<ObjectIdentifier text="{soaModel>Sspid}"/>
-					<Text text="{soaModel>Description}"/>
-					<Text text="{ path : 'soaModel>Datecontstart', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-					<Text text="{ path : 'soaModel>Datecontend', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }"/>
-					<Text text="{soaModel>SspStatus}"/>
-					<Text text="{soaModel>Soaref}"/>
-					<Text text="{soaModel>SspStatusText}"/>
-					<Text text="{soaModel>Amount}"/>
-					<Text text="{soaModel>Eligstatus}"/>
-					<Text text="{soaModel>EmployeeResponsibleId}"/>
-					<Text text="{soaModel>EmployeeResponsibleName}"/>
-					<Text text="{soaModel>Dbalink}"/>
-					<Text text="{soaModel>DbaStatus}"/>
-					<Text text="{soaModel>DbaStatusText}"/>
-					<Text text="{soaModel>Applicant}"/>
-					<Text text="{soaModel>ApplicantName}"/>
-					<Text text="{soaModel>Soaref}"/>
-					<Text text="{soaModel>Caselink}"/>
-				</cells>
-			</ColumnListItem>
-		</items>
-	</Table>
-</mvc:View>
+<core:View xmlns:core="sap.ui.core" xmlns="sap.uxap" xmlns:layout="sap.ui.layout" xmlns:m="sap.m" height="100%">
+	<ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="false" showHeaderContent="true">
+		<headerContent>
+			<layout:VerticalLayout>
+				<m:ObjectStatus title="Social Service Plan Details"/>
+				<m:ObjectStatus title="SSP ID" text="{soaModel>Sspid}" binding="{soaModel>SOAHeaderDetails}"/>
+				<m:ObjectStatus title="SSP Description" text="{soaModel>Description}" binding="{soaModel>SOAHeaderDetails}"/>
+				<m:ObjectStatus title="Start Date"
+					text="{ path : 'soaModel>Datecontstart', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }" binding="{soaModel>SOAHeaderDetails}"/>
+				<m:ObjectStatus title="End Date"
+					text="{ path : 'soaModel>Datecontend', type : 'sap.ui.model.type.Date', formatOptions : { style : 'medium' } }" binding="{soaModel>SOAHeaderDetails}"/>
+					<m:ObjectStatus title="SSP Status" text="{soaModel>SspStatusText}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+			</layout:VerticalLayout>
+			<layout:VerticalLayout>
+				<m:ObjectStatus title="Linked Documents"/>
+				<m:ObjectStatus title="Case ID" text="{soaModel>Caselink}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+				<m:ObjectStatus title="Case Status" text="{soaModel>Casestatustext}" binding="{soaModel>SOAHeaderDetails}"/>
+				<m:ObjectStatus title="SOA Reference" text="{soaModel>Soaref}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+				<m:ObjectStatus title="DBA ID" text="{soaModel>Dbalink}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+				<m:ObjectStatus title="DBA Status" text="{soaModel>DbaStatusText}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+			</layout:VerticalLayout>
+			<layout:VerticalLayout>
+				<layout:layoutData>
+					<ObjectPageHeaderLayoutData visibleS="false"/>
+				</layout:layoutData>
+				<m:ObjectStatus title="Benefits"/>
+				<m:ObjectStatus title="Applicant ID" text="{soaModel>Applicant}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+				<m:ObjectStatus title="Applicant Name" text="{soaModel>ApplicantName}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+				<m:ObjectStatus title="Eligibility Status" text="{soaModel>Eligstatus}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+				<m:ObjectStatus title="Entitlement Amount" text="{soaModel>Amount}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+			</layout:VerticalLayout>
+			<layout:VerticalLayout>
+				<m:ObjectStatus title="Processor"/>
+				<m:ObjectStatus title="Emp Resposible ID" text="{soaModel>EmployeeResponsibleId}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+				<m:ObjectStatus title="Emp Resposible Name" text="{soaModel>EmployeeResponsibleName}" binding="{soaModel>SSPHeaderDetailsSet}"/>
+			</layout:VerticalLayout>
+		</headerContent>
+	</ObjectPageLayout>
+</core:View>

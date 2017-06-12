@@ -4,10 +4,10 @@
 			<Column width="12em">
 				<Text text="Benefit"/>
 			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true">
+			<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
 				<Text text="Description"/>
 			</Column>
-			<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+			<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
 				<Text text="Start Date"/>
 			</Column>
 			<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
