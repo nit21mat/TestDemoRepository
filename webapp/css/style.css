@@ -216,7 +216,7 @@ font-weight: bold;
 }
 
 span#__status23-text {
-	color: black;
+font-weight: bold;
 }
 
 span#__status24-text {
@@ -268,5 +268,21 @@ font-weight: bold;
 }
 
 span#__text61 {
+font-weight: bold;
+}
+
+span#__text62 {
+font-weight: bold;
+}
+
+span#__text63 {
+font-weight: bold;
+}
+
+span#__text64 {
+font-weight: bold;
+}
+
+span#__text65 {
 font-weight: bold;
 }
